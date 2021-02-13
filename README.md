@@ -2,15 +2,15 @@
 
 These are web apis that floorbot uses
 
-### Installation
+## Installation
 
 ```bash
 npm install git://github.com/floorbot-js/apis.js
 ```
 
-### Booru API Examples
+## Booru API Examples
 
-#### [Danbooru](http://danbooru.donmai.us/) Examples
+### [Danbooru](http://danbooru.donmai.us/) Examples
 
 ```js
 const { Danbooru } = require('apis.js');
@@ -24,7 +24,7 @@ Danbooru.autocomplete('1g').then(console.log);           // Get autocomplete sug
 Danbooru.get404().then(console.log);                     // Get a random danbooru 404 image url
 ```
 
-#### [e621](https://e621.net/) Examples
+### [e621](https://e621.net/) Examples
 
 ```js
 const { E621 } = require('apis.js');
@@ -37,7 +37,7 @@ E621.autocomplete('so').then(console.log);               // Get autocomplete sug
 E621.get404().then(console.log);                         // Get a random e621 404 image url
 ```
 
-#### [Rule34](https://rule34.xxx/) Examples
+### [Rule34](https://rule34.xxx/) Examples
 
 ```js
 const { Rule34 } = require('apis.js');
@@ -50,7 +50,7 @@ Rule34.get404().then(console.log);                       // Get a random rule34 
 
 Note that the api returns in XML format and this package uses the [xml2js](https://www.npmjs.com/package/xml2js) dependency to convert this to a js object
 
-#### [Safebooru](http://safebooru.donmai.us/) Examples
+### [Safebooru](http://safebooru.donmai.us/) Examples
 
 ```js
 const { Safebooru } = require('apis.js');
@@ -64,7 +64,7 @@ Safebooru.autocomplete('1g').then(console.log);          // Get autocomplete sug
 Safebooru.get404().then(console.log);                    // Get a random safebooru 404 image url
 ```
 
-### [AniList](https://anilist.gitbook.io/anilist-apiv2-docs/) API Examples
+## [AniList](https://anilist.gitbook.io/anilist-apiv2-docs/) API Examples
 
 ```js
 const { AniList } = require('apis.js');
@@ -73,7 +73,7 @@ AniList.request('<query.gql>', { vars })                 // Query the AniList Gr
     .then(console.log);
 ```
 
-### [OpenWeather](https://openweathermap.org/api/) API Examples
+## [OpenWeather](https://openweathermap.org/api/) API Examples
 
 ```js
 const { OpenWeather } = require('apis.js');
@@ -84,7 +84,7 @@ OpenWeather.forecast(params).then(console.log);          // Get the forecast for
 OpenWeather.weather(params).then(console.log);           // Get the weather for s specified search
 ```
 
-### [UrbanDictionary](https://www.urbandictionary.com/) API Examples
+## [UrbanDictionary](https://www.urbandictionary.com/) API Examples
 
 ```js
 const { UrbanDictionary } = require('apis.js');
@@ -93,7 +93,7 @@ UrbanDictionary.define('word').then(console.log);        // Get the definition o
 UrbanDictionary.random().then(console.log);              // Get the definition of a random word
 ```
 
-### [VTuber](https://virtualyoutuber.fandom.com/wiki/Virtual_YouTuber_Wiki) API Examples
+## [VTuber](https://virtualyoutuber.fandom.com/wiki/Virtual_YouTuber_Wiki) API Examples
 
 ```js
 const { VTuber } = require('apis.js');
