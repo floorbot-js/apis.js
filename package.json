@@ -1,0 +1,24 @@
+{
+    "name": "apis.js",
+    "version": "1.0.0",
+    "description": "Various easy to use imageboard apis",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/floorbot-js/apis.js.git"
+    },
+    "author": "Arcadeena",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/floorbot-js/apis.js/issues"
+    },
+    "homepage": "https://github.com/floorbot-js/apis.js#readme",
+    "dependencies": {
+        "node-fetch": "^2.6.1",
+        "puppeteer": "^7.1.0",
+        "xml2js": "^0.4.23"
+    }
+}
