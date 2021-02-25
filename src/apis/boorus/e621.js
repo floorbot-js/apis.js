@@ -12,7 +12,7 @@ class E621 {
             options.headers.Authorization = `Basic ${Buffer.from(`${E621.USERNAME}:${E621.API_KEY}`).toString('base64')}`;
         }
 
-        params = params.map((param) => `${param[0]}=${param[1]}`).join('&');
+        params = params.map((param) => `${param[0]}=${encodeURIComponent(param[1])}`).join('&');
         const url = `https://e621.net/${endpoint}.json?${params}`;
         return fetch(url, options).then(res => res.json());
     }

@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 class VTuber {
     static request(endpoint, params = [], options = {}) {
         options = Object.assign({ method: 'GET' }, options);
-        params = params.map((param) => `${param[0]}=${param[1]}`).join('&');
+        params = params.map((param) => `${param[0]}=${encodeURIComponent(param[1])}`).join('&');
         const url = `https://virtualyoutuber.fandom.com/${endpoint}?${params}`;
         return fetch(url, options).then(res => res.json());
     }

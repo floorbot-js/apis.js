@@ -12,7 +12,7 @@ class Safebooru {
             options.headers.Authorization = `Basic ${Buffer.from(`${Safebooru.USERNAME}:${Safebooru.API_KEY}`).toString('base64')}`;
         }
 
-        params = params.map((param) => `${param[0]}=${param[1]}`).join('&');
+        params = params.map((param) => `${param[0]}=${encodeURIComponent(param[1])}`).join('&');
         const url = `https://safebooru.donmai.us/${endpoint}.json?${params}`;
         return fetch(url, options).then(res => res.json());
     }

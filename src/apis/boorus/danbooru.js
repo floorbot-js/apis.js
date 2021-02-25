@@ -12,7 +12,7 @@ class Danbooru {
             options.headers.Authorization = `Basic ${Buffer.from(`${Danbooru.USERNAME}:${Danbooru.API_KEY}`).toString('base64')}`;
         }
 
-        params = params.map((param) => `${param[0]}=${param[1]}`).join('&');
+        params = params.map((param) => `${param[0]}=${encodeURIComponent(param[1])}`).join('&');
         const url = `https://danbooru.donmai.us/${endpoint}.json?${params}`;
         return fetch(url, options).then(res => res.json());
     }

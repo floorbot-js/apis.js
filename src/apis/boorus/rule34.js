@@ -6,7 +6,7 @@ class Rule34 {
     static request(endpoint, params = [], options = {}) {
         options = Object.assign({ method: 'GET' }, options);
         params = [['page', 'dapi'], ['s', 'post'], ['q', 'index']].concat(params)
-        params = params.map((param) => `${param[0]}=${param[1]}`).join('&');
+        params = params.map((param) => `${param[0]}=${encodeURIComponent(param[1])}`).join('&');
         const url = `https://rule34.xxx/${endpoint}.php?${params}`;
         return fetch(url, options);
     }
